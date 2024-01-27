@@ -17,3 +17,10 @@ model Session {
   accessToken String
   userId      BigInt?
 }
+
+model save_later_cart {
+   id              String    @id
+   checkout_token  String
+   product_ids     Json
+   created_at      DateTime  @default(now())
+}
